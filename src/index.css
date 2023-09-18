@@ -308,6 +308,8 @@ Grocery List
   display: flex;
   align-items: center;
   gap: 10px;
+  text-transform: capitalize;
+  margin-top: 20px;
 }
 .item-name {
   margin-bottom: 0px;
