@@ -33,13 +33,19 @@ function App() {
     const nextItems = [...items, newItem]
     setItems(nextItems)
     setLocalStorage(nextItems)
-    toast.success("Item added to the list")
+    toast.success("Item added to the list", {
+      autoClose: 1500,
+      hideProgressBar: true,
+    })
   }
   const removeItem = (id) => {
     const nextItems = items.filter((item) => item.id !== id)
     setItems(nextItems)
     setLocalStorage(nextItems)
-    toast.success("Item removed")
+    toast.success("Item removed", {
+      autoClose: 1500,
+      hideProgressBar: true,
+    })
   }
   const editItem = (id) => {
     const nextItems = items.map((item) => {

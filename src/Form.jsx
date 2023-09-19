@@ -6,7 +6,10 @@ function Form({ addItem }) {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (!newItemName) {
-      toast.error("Please provide a value")
+      toast.error("Please provide a value", {
+        autoClose: 1500,
+        hideProgressBar: true,
+      })
       return
     }
     addItem(newItemName)
