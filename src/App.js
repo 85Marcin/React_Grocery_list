@@ -38,10 +38,21 @@ function App() {
     setItems(nextItems)
     setLocalStorage(nextItems)
   }
+  const editItem = (id) => {
+    const nextItems = items.map((item) => {
+      if (item.id === id) {
+        const nextItem = { ...item, completed: !item.completed }
+        return nextItem
+      }
+      return item
+    })
+    setItems(nextItems)
+    setLocalStorage(nextItems)
+  }
   return (
     <section className="section-center">
       <Form addItem={addItem} />
-      <Items items={items} removeItem={removeItem} />
+      <Items items={items} removeItem={removeItem} editItem={editItem} />
     </section>
   )
 }
