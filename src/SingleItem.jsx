@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 function SingleItem({ item, removeItem, editItem }) {
   return (
     <div className="single-item">
